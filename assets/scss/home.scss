@@ -32,12 +32,7 @@
         color: gray;
     }
     a {
-        text-decoration: none;
-        color: white;
-        padding: 20px;
-        background-image: linear-gradient(#FF79DA, #9356DC);
-        border-radius: 50px;
-       @include box-shadow-light;
+        @include btn-action;
     }
 }
 #tutorial {
@@ -65,7 +60,7 @@
         &:nth-child(3) {
             background-color: rgba(147, 86, 220, 0.15);
         > i {
-            color: #9356DC ;
+            color: $primary ;
         }
         }
         > i {
@@ -78,8 +73,8 @@
             content: counter(steps);
             position: absolute;
             left: -1em;
-            background-color: #9356dc;
-            color: #fff;
+            background-color: $primary;
+            color: white;
             font-weight: 400;
             text-align: center;
             border-radius: 50%;
@@ -141,6 +136,7 @@
            }
     }
 }
+
 /* Responsive */ 
 
 /* tablette */
@@ -177,10 +173,6 @@
         article {
             flex-basis: 23%;
         }
-    }
-    footer > div {
-        max-width: 1130px;
-        margin: 0 auto;
     }
 }
 
