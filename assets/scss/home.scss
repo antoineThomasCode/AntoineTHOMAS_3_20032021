@@ -57,7 +57,7 @@
         border-radius: 20px;
         background-color: $bc-light-gray;
         @include box-shadow-light
-        &:nth-child(3) {
+        &:hover {
             background-color: rgba(147, 86, 220, 0.15);
         > i {
             color: $primary ;
@@ -144,8 +144,8 @@
     #tutorial {
         max-width: 1130px;
         margin: 0 auto;
-        ol {
-            max-width: 400px;
+        li {
+            max-width: 300px;
             margin: 0 auto;
         }
     }
@@ -162,6 +162,15 @@
 /* Desktop */
 
 @media screen and (min-width: 992px) {
+    #tutorial {
+        h2 {
+            margin-bottom: 20px;
+        }
+        ol {
+        flex-direction: row;
+        column-gap: 50px;
+        }
+    }
     #restaurants-list {
          > div {
         max-width: 1130px;

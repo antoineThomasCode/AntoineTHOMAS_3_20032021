@@ -168,9 +168,9 @@ main {
     box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
     -webkit-box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
     -moz-box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31); }
-    #tutorial li:nth-child(3) {
+    #tutorial li:hover {
       background-color: rgba(147, 86, 220, 0.15); }
-      #tutorial li:nth-child(3) > i {
+      #tutorial li:hover > i {
         color: #9356DC; }
     #tutorial li > i {
       color: gray;
@@ -245,8 +245,8 @@ main {
   #tutorial {
     max-width: 1130px;
     margin: 0 auto; }
-    #tutorial ol {
-      max-width: 400px;
+    #tutorial li {
+      max-width: 300px;
       margin: 0 auto; }
   #restaurants-list > div {
     -moz-column-gap: 15px;
@@ -256,6 +256,12 @@ main {
 
 /* Desktop */
 @media screen and (min-width: 992px) {
+  #tutorial h2 {
+    margin-bottom: 20px; }
+  #tutorial ol {
+    flex-direction: row;
+    -moz-column-gap: 50px;
+         column-gap: 50px; }
   #restaurants-list > div {
     max-width: 1130px;
     margin: 0 auto;
