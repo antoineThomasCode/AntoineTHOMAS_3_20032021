@@ -134,7 +134,7 @@ main {
   #call-to-action p {
     text-align: center;
     font-size: 1.2em;
-    font-weight: 400;
+    font-weight: 100;
     color: gray; }
   #call-to-action a {
     text-decoration: none;
@@ -162,7 +162,7 @@ main {
     margin: 0 auto;
     width: 80%;
     padding: 30px;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 20px;
     background-color: rgba(220, 220, 220, 0.3);
     box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
@@ -226,7 +226,7 @@ main {
         font-weight: 500; }
     #restaurants-list article > div {
       font-size: 1.2em;
-      font-weight: 300;
+      font-weight: 100;
       padding: 20px 15px; }
     #restaurants-list article img {
       -o-object-fit: cover;
@@ -246,6 +246,7 @@ main {
     max-width: 1130px;
     margin: 0 auto; }
     #tutorial li {
+      min-width: 230px;
       max-width: 300px;
       margin: 0 auto; }
   #restaurants-list > div {
@@ -268,5 +269,5 @@ main {
     border-radius: 20px;
     justify-content: space-around; }
   #restaurants-list article {
-    flex-basis: 23%; } }
+    flex-basis: 45%; } }
 
