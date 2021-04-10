@@ -120,9 +120,8 @@ header {
 main {
   flex-direction: column;
   max-width: 1130px;
-  margin: 0 auto; }
-  main section {
-    padding: 20px; }
+  margin: 0 auto;
+  background-color: #ffffd4; }
   main figure {
     z-index: 2;
     display: flex;
@@ -134,7 +133,7 @@ main {
       height: 210px; }
   main #menu-container {
     z-index: 3;
-    background-color: white;
+    background-color: #fbfbf4;
     position: relative;
     bottom: 30px;
     padding: 30px 0;
@@ -145,7 +144,7 @@ main {
     main #menu-container section {
       display: flex;
       flex-direction: column;
-      row-gap: 10px; }
+      row-gap: 20px; }
     main #menu-container h1 {
       padding: 0 0 10px 20px;
       font-size: 2em;
@@ -161,8 +160,11 @@ main {
       box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
       -webkit-box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
       -moz-box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+      background-color: white;
       display: flex;
       border-radius: 20px; }
+      main #menu-container article:hover {
+        cursor: pointer; }
       main #menu-container article div:first-child {
         display: flex;
         flex-direction: column;
