@@ -181,9 +181,14 @@ main {
         background-color: #99E2D0;
         border-radius: 0 20px 20px 0;
         display: none; }
+        main #menu-container article div:nth-child(2) i {
+          color: white;
+          font-size: 1.5em; }
       main #menu-container article:hover div:nth-child(2) {
         flex-basis: 80px;
-        display: block; }
+        display: flex;
+        justify-content: center;
+        align-items: center; }
     main #menu-container > a {
       display: flex;
       align-self: center;
