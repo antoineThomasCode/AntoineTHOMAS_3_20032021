@@ -176,10 +176,18 @@ main {
         flex-basis: 100%;
         justify-content: space-between;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
+        overflow: hidden; }
+        main #menu-container article div:first-child h3 {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          flex-basis: 100%; }
         main #menu-container article div:first-child p {
-          font-size: 1em; }
+          font-size: 1em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          flex-basis: 100%; }
       main #menu-container article > div:nth-child(2) {
         display: flex;
         align-items: center;

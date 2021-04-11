@@ -70,9 +70,18 @@ main {
                 justify-content: space-between;
                 white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
+                h3 {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex-basis: 100%;
+                }
                 p {
                     font-size: 1em;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex-basis: 100%;
                 }
                 
             }
