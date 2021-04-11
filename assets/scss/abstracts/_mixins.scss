@@ -3,11 +3,3 @@
     -webkit-box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
     -moz-box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
 }
-@mixin btn-action {
-    text-decoration: none;
-        color: white;
-        padding: 20px;
-        background-image: linear-gradient($secondary, $primary);
-        border-radius: 50px;
-       @include box-shadow-light;
-}
