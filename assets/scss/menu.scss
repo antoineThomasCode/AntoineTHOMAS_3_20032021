@@ -1,1 +1,172 @@
 @import "./main.scss";
+
+header {
+    display: flex;
+    > a:first-child i {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+    }
+}
+main {
+    flex-direction: column;
+    background-color: white;
+    figure {
+        z-index: 2;
+        display: flex;
+        flex-basis: 100%;
+        img {
+            flex-basis: 100%;
+            object-fit: cover;
+            height: 210px;
+        }
+    #white-shaodow-for-picture {
+        display: none;
+    }
+    }
+    
+    #menu-container {
+        z-index: 3;
+        background-color: #f6f8fa;
+        margin: 0 auto;
+        position: relative;
+        bottom: 30px;
+        padding: 30px 0;
+        border-radius: 40px 40px 0 0;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 10px;
+        section {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        h1 {
+            padding:0 0 10px 20px;
+            font-size: 2em;
+            font-family: "Shrikhand", "cursive";
+        }
+        h2 {
+            font-weight: 300;
+            font-size: 1.3em;
+            text-transform: uppercase;
+             > span {
+                padding-bottom: 5px;
+                border-bottom: solid 2.5px $tertiary;
+            }
+        }
+        article {
+            @include box-shadow-light;
+            background-color: white;
+            display: flex;
+            border-radius: 20px;
+            &:hover {
+                cursor: pointer;
+            }
+            div:first-child  {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                justify-content: space-between;
+                white-space: nowrap;
+                overflow: hidden;
+                h3 {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex-basis: 100%;
+                }
+                p {
+                    font-size: 1em;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex-basis: 100%;
+                }
+            }
+            > div:nth-child(2) {
+                display: flex;
+                align-items: center;
+                padding-right: 10px;
+                span {
+                    font-weight: bold;
+                }
+            }
+            > div:nth-child(3){
+                background-color: $tertiary;
+                border-radius: 0 20px 20px 0;
+                display: none;
+                 > i {
+                    color: white;
+                    font-size: 1.5em;
+                }
+            }
+            &:hover div:nth-child(3) {
+                flex-basis: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+        > a {
+            display: flex;
+            align-self: center;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        h3 {
+            padding: 15px 0 10px 15px;
+        }
+        p {
+            padding: 0 0 15px 15px;
+        }
+        
+    }
+}
+footer {
+    z-index: 5;
+    margin-top: -30px;
+}
+@media screen and (min-width: 768px) {
+    main {
+        z-index: 3;
+        margin-bottom: -200px;
+        figure > img {
+            height: 500px;
+            position: relative;
+            
+        }
+        #white-shadow-for-picture {
+            display: flex;
+            width: 100%;
+            position: absolute;
+            bottom: 375px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #fff 80%, #fff 100%);
+            z-index: 2;
+            height: 55%;
+        }
+        #menu-container {
+            width: 80%;
+            bottom: 200px;
+        }
+    }
+}
+@media screen and (min-width: 1500px) {
+     main {
+    
+         #menu-container {
+            width: 75%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 30px 20px;
+            h1 {
+                width: 100%;
+            }
+            section {
+                flex-basis: 28%;
+            }
+        }
+    }
+}
