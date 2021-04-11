@@ -20,12 +20,14 @@ main {
             object-fit: cover;
             height: 210px;
         }
+    #white-shaodow-for-picture {
+        display: none;
+    }
     }
     
     #menu-container {
         z-index: 3;
         background-color: #f6f8fa;
-        min-width: 325px;
         margin: 0 auto;
         position: relative;
         bottom: 30px;
@@ -66,17 +68,23 @@ main {
                 flex-direction: column;
                 flex-basis: 100%;
                 justify-content: space-between;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 p {
                     font-size: 1em;
                 }
+                
+            }
+            > div:nth-child(2) {
+                display: flex;
+                align-items: center;
+                padding-right: 10px;
                 span {
-                    float: right;
-                    padding-right: 10px;
-                    padding-top: 5px;
                     font-weight: bold;
                 }
             }
-            > div:nth-child(2){
+            > div:nth-child(3){
                 background-color: $tertiary;
                 border-radius: 0 20px 20px 0;
                 display: none;
@@ -85,7 +93,7 @@ main {
                     font-size: 1.5em;
                 }
             }
-            &:hover div:nth-child(2) {
+            &:hover div:nth-child(3) {
                 flex-basis: 80px;
                 display: flex;
                 justify-content: center;
@@ -96,7 +104,6 @@ main {
         > a {
             display: flex;
             align-self: center;
-            @include btn-action;
             padding-left: 50px;
             padding-right: 50px;
         }
@@ -116,14 +123,42 @@ footer {
 @media screen and (min-width: 768px) {
     main {
         z-index: 3;
-        box-shadow: 2px -19px 63px 26px rgba(253,252,252,1);
-        -webkit-box-shadow: 2px -19px 63px 26px rgba(253,252,252,1);
-        -moz-box-shadow: 2px -19px 63px 26px rgba(253,252,252,1);
+        margin-bottom: -150px;
         figure > img {
-            height: 400px;
+            height: 500px;
+            position: relative;
+            
+        }
+        #white-shadow-for-picture {
+            display: flex;
+            width: 100%;
+            position: absolute;
+            bottom: 375px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #fff 98%, #fff 99%);
+            z-index: 2;
+            height: 100%;
         }
         #menu-container {
-            width: 50%;
+            width: 80%;
+            bottom: 150px;
+        }
+    }
+}
+@media screen and (min-width: 1500px) {
+     main {
+    
+         #menu-container {
+            width: 75%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 30px 20px;
+            h1 {
+                width: 100%;
+            }
+            section {
+                flex-basis: 28%;
+            }
         }
     }
 }
