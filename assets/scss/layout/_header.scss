@@ -1,0 +1,15 @@
+
+header {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 10px 0;
+    a > img {
+        height: 30px;
+        width: auto;
+    }
+}
+main {
+    z-index: 1;
+}
+
