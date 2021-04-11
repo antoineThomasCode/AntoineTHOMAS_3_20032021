@@ -98,14 +98,12 @@ footer {
     padding-bottom: 20px; }
 
 @media screen and (min-width: 992px) {
-  footer {
-    margin-top: 300px; }
-    footer > div {
-      max-width: 75%;
-      margin: 0 auto; } }
+  footer > div {
+    max-width: 75%;
+    margin: 0 auto; } }
 
 header {
-  z-index: 2;
+  z-index: 4;
   display: flex;
   justify-content: center;
   padding: 20px 0 10px 0; }
