@@ -82,6 +82,7 @@ main {
           flex-basis: 100%;
         }
         p {
+          display: inline-block;  
           font-size: 1em;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -93,8 +94,8 @@ main {
         display: flex;
         align-items: flex-end;
         padding-right: 10px;
-        position: absolute;
-        right: 0;
+        position: relative;
+        right: -60px;
         background-color: white;
         width: 50px;
         height: 75px;
@@ -105,7 +106,7 @@ main {
         }
       }
       &:hover > div:nth-child(2) {
-          right: 80px;
+          right: 0px;
           
       }
       > div:nth-child(3) {
@@ -116,21 +117,21 @@ main {
         align-items: center;
         height: 75px;
         width: 80px;
-        position: absolute;
+        position: relative;
         transition: left 0.6s;
-        left: 390px;
+        left: 80px;
         > i {
           color: white;
           font-size: 1.5em;
         }
       }
       &:hover div:nth-child(3) {
-        flex-basis: 80px;
+        flex-basis: 90px;
         display: flex;
-        left: 310px;
+        left: 0px;
         i {
-            transform: rotate(360deg);
-            transition: transform 0.6s;
+            transform: rotate(720deg);
+            transition: transform 0.6s linear;
         }
       }
     }
@@ -181,10 +182,10 @@ footer {
     }
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1650px) {
   main {
     #menu-container {
-      width: 75%;
+      width: 80%;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
