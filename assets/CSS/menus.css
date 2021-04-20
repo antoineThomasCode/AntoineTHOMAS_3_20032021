@@ -228,8 +228,8 @@ main {
         display: flex;
         left: 0px; }
         main #menu-container article:hover div:nth-child(3) i {
-          transform: rotate(720deg);
-          transition: transform 0.6s linear; }
+          transform: rotate(360deg);
+          transition: transform 0.5s linear; }
     main #menu-container > a {
       display: flex;
       align-self: center;
