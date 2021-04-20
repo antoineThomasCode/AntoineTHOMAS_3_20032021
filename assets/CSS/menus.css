@@ -169,7 +169,9 @@ main {
       display: flex;
       overflow: hidden;
       border-radius: 20px;
-      position: relative; }
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
       main #menu-container article:hover {
         cursor: pointer; }
       main #menu-container article div:first-child {
@@ -177,8 +179,9 @@ main {
         flex-direction: column;
         flex-basis: 100%;
         justify-content: space-between;
-        white-space: nowrap;
-        overflow: hidden; }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
         main #menu-container article div:first-child h3 {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -192,10 +195,19 @@ main {
           flex-basis: 100%; }
       main #menu-container article > div:nth-child(2) {
         display: flex;
-        align-items: center;
-        padding-right: 10px; }
+        align-items: flex-end;
+        padding-right: 10px;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        width: 50px;
+        height: 75px;
+        transition: right 0.6s; }
         main #menu-container article > div:nth-child(2) span {
-          font-weight: bold; }
+          font-weight: bold;
+          padding: 15px; }
+      main #menu-container article:hover > div:nth-child(2) {
+        right: 80px; }
       main #menu-container article > div:nth-child(3) {
         background-color: #99E2D0;
         border-radius: 0 20px 20px 0;
