@@ -1,26 +1,104 @@
-
+/*lazy loading menu items */
 @keyframes lazy-loading-menu {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-};
-
-
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* iteration on item menu and articles */
 @for $i from 1 through 4 {
-    #menu-container section:nth-child(#{$i}) {
-        animation: lazy-loading-menu (0.25s*$i);
-    }
+  #menu-container section:nth-child(#{$i}) {
+    animation: lazy-loading-menu (0.3s * $i);
+  }
 }
 @for $i from 1 through 4 {
-    #menu-container section article:nth-child(#{$i}) {
-        animation: lazy-loading-menu (0.35s*$i);
-        article{
-            animation: lazy-loading-menu (0.25s*$i);
-        }
-    }
+  #menu-container section article:nth-child(#{$i}) {
+    animation: lazy-loading-menu (0.4s * $i);
+  }
+}
+/*spinner loader*/
+
+@keyframes rotating {
+  50% {
+    transform: rotate(calc(180deg * var(--direction)));
+  }
+
+  100% {
+    transform: rotate(calc(360deg * var(--direction)));
+  }
+}
+@keyframes loader-fadeOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    height: 0;
+    width: 0;
+    display: none;
+  }
+}
+#spinner-loader {
+  z-index: 15;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+
+  animation: loader-fadeOut 2s 4s ease-in-out forwards;
+
+  .loader {
+    width: 10em;
+    height: 10em;
+    font-size: 25px;
+    box-sizing: border-box;
+    border-top: 0.3em solid $primary;
+    border-radius: 50%;
+    position: relative;
+    animation: rotating 2s ease-in-out infinite;
+    --direction: 1;
+  }
+
+  .loader::before,
+  .loader::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    box-sizing: border-box;
+    top: -0.2em;
+  }
+
+  .loader::before {
+    border-top: 0.3em solid $tertiary;
+    transform: rotate(120deg);
+  }
+
+  .loader::after {
+    border-top: 0.3em solid $secondary;
+    transform: rotate(240deg);
+  }
+
+  .loader span {
+    position: absolute;
+    color: black;
+    font-family: "Shrikhand", "cursive";
+    font-weight: 700;
+    font-size: 1em;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 10em;
+    animation: rotating 2s linear infinite;
+    --direction: -1;
+  }
 }
