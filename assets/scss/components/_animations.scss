@@ -1,0 +1,26 @@
+
+@keyframes lazy-loading-menu {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+};
+
+
+@for $i from 1 through 4 {
+    #menu-container section:nth-child(#{$i}) {
+        animation: lazy-loading-menu (0.25s*$i);
+    }
+}
+@for $i from 1 through 4 {
+    #menu-container section article:nth-child(#{$i}) {
+        animation: lazy-loading-menu (0.35s*$i);
+        article{
+            animation: lazy-loading-menu (0.25s*$i);
+        }
+    }
+}
