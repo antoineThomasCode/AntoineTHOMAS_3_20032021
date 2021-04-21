@@ -84,17 +84,17 @@ a {
 
 /*lazy loading menu items */
 @-webkit-keyframes lazy-loading-menu {
-  from {
+  0% {
     transform: translateY(-50px);
     opacity: 0; }
-  to {
+  90% {
     transform: translateY(0);
     opacity: 1; } }
 @keyframes lazy-loading-menu {
-  from {
+  0% {
     transform: translateY(-50px);
     opacity: 0; }
-  to {
+  90% {
     transform: translateY(0);
     opacity: 1; } }
 
