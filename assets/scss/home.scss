@@ -1,5 +1,5 @@
 @import "./main.scss";
-
+/*spinner loader*/ 
 #location {
     z-index: 1;
     justify-content: center;
@@ -11,10 +11,9 @@
         font-weight: 500;
      > i {
         margin-right: 10px;
-    }
+        }
     }
 }
-
 #call-to-action {
     flex-direction: column;
     align-items: center;
@@ -60,7 +59,7 @@
             background-color: rgba(147, 86, 220, 0.15);
         > i {
             color: $primary ;
-        }
+          }
         }
         > i {
             color: gray;
@@ -102,7 +101,6 @@
             flex-basis: 100%;
             flex-direction: column;
             }
-
         figure {
             flex-basis: 100%;
             position: relative;
@@ -135,9 +133,7 @@
            }
     }
 }
-
 /* Responsive */ 
-
 /* tablette */
 @media screen and (min-width: 576px) {
     #tutorial {
@@ -161,9 +157,7 @@
         }
     }
 }
-
 /* Desktop */
-
 @media screen and (min-width: 992px) {
     #tutorial {
         h2 {
@@ -178,7 +172,6 @@
          > div {
         max-width: 1130px;
         margin: 0 auto;
-
         border-radius: 20px;
         justify-content: space-between;
         }
@@ -187,11 +180,9 @@
         }
     }
     footer {
-        bottom: -230px;
         > div {
             max-width: 1130px;
             margin: 0 auto;
-            
         }
     }
 }
