@@ -161,12 +161,12 @@ main {
 
 @for $i from 1 through 3 {
   #menu-container section:nth-of-type(2) article:nth-of-type(#{$i}) {
-      animation: lazy-loading-menu ((0.15s*$i)+1s) linear;
+      animation: lazy-loading-menu ((0.20s*$i)+1s) linear;
   }
 }
 @for $i from 1 through 3 {
   #menu-container section:nth-of-type(3) article:nth-of-type(#{$i}) {
-      animation: lazy-loading-menu ((0.15s*$i)+2s) linear;
+      animation: lazy-loading-menu ((0.20s*$i)+2s) linear;
   }
 }
 footer {
