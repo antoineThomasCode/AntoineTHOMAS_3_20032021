@@ -183,6 +183,14 @@
             flex-basis: 48%;
         }
     }
+    footer {
+        bottom: -230px;
+        > div {
+            max-width: 1130px;
+            margin: 0 auto;
+            
+        }
+    }
 }
 
 
