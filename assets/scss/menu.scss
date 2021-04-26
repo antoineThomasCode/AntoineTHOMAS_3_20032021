@@ -31,30 +31,41 @@ main {
     margin: 0 auto;
     position: relative;
     bottom: 30px;
-    padding: 30px 0;
+    padding: 40px 0 100px 0;
     border-radius: 40px 40px 0 0;
     flex-direction: column;
     width: 100%;
-    row-gap: 10px;
+    row-gap: 5px;
     margin-bottom: -30px;
     section {
       display: flex;
       flex-direction: column;
-      row-gap: 20px;
+      row-gap: 15px;
+      padding: 20px;
     }
     h1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
       padding: 0 0 10px 20px;
       font-size: 2em;
       font-family: "Shrikhand", "cursive";
+      span {
+        margin-right: 30px;
+      }
     }
     h2 {
       font-weight: 300;
-      font-size: 1.3em;
+      font-size: 1.1em;
       text-transform: uppercase;
       > span {
         padding-bottom: 5px;
         border-bottom: solid 2.5px $tertiary;
       }
+    }
+    .btn {
+      margin-top: 30px;
     }
     article {
       @include box-shadow-light;
@@ -186,7 +197,7 @@ footer {
       display: flex;
       width: 100%;
       position: absolute;
-      height: 30%;
+      height: 35%;
       top: 0px;
       z-index: 2;
       background: linear-gradient(
@@ -202,6 +213,10 @@ footer {
       bottom: 190px;
       margin-bottom: -190px;
     }
+  }
+  footer >div {
+    margin: 0 auto;
+    width: 80%;
   }
 }
 

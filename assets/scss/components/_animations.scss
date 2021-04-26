@@ -165,3 +165,38 @@
       transform: rotate(35deg);
     }
 }
+/*like animation */
+.animation-like {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    &:first-child {
+      z-index: 3;
+      path {
+        fill: gray;
+      }
+    }
+    &:last-child {
+      path {
+        opacity: 0;
+        fill: $primary;
+        transform: scale(0);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    svg:last-child {
+      top: 1px;
+      path {
+        transform: scale(0.9);
+        transition: all 0.6s;
+        opacity: 1;
+        transform-origin: center;
+      }
+    }
+  }
+}
