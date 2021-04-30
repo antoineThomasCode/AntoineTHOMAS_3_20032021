@@ -1,9 +1,9 @@
 @import "./main.scss";
-
+/*spinner loader*/ 
 #location {
     z-index: 1;
     justify-content: center;
-    background-color: #eaeaea;
+    background-color: #EAEAEA;
     color: #353535;
     padding: 15px 0;
     box-shadow: inset -2px 2px 6px rgba(54, 54, 54, 0.2) ;
@@ -11,16 +11,15 @@
         font-weight: 500;
      > i {
         margin-right: 10px;
-    }
+        }
     }
 }
-
 #call-to-action {
     flex-direction: column;
     align-items: center;
     row-gap: 25px;
     padding-bottom: 60px;
-    background-color: rgba(220,220,220, 0.21);
+    background-color: #F6F6F6;
     h1 {
         text-align: center;
         flex-basis: 80%;
@@ -60,7 +59,7 @@
             background-color: rgba(147, 86, 220, 0.15);
         > i {
             color: $primary ;
-        }
+          }
         }
         > i {
             color: gray;
@@ -83,7 +82,7 @@
     }
 }
 #restaurants-list {
-    background-color: $bc-light-gray;
+    background-color: #F6F6F6;
     > div {
         row-gap: 20px;
     }
@@ -97,12 +96,16 @@
         flex-basis: 100%;
         border-radius: 20px;
         @include box-shadow-light;
+        div {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: space-between;
+        }
         > a {
             display: flex;
             flex-basis: 100%;
             flex-direction: column;
             }
-
         figure {
             flex-basis: 100%;
             position: relative;
@@ -135,9 +138,7 @@
            }
     }
 }
-
 /* Responsive */ 
-
 /* tablette */
 @media screen and (min-width: 576px) {
     #tutorial {
@@ -149,6 +150,9 @@
             margin: 0 auto;
         }
     }
+    #call-to-action br {
+        display: none; 
+    }
     #restaurants-list {
         > div {
             column-gap: 15px;
@@ -158,9 +162,7 @@
         }
     }
 }
-
 /* Desktop */
-
 @media screen and (min-width: 992px) {
     #tutorial {
         h2 {
@@ -175,12 +177,17 @@
          > div {
         max-width: 1130px;
         margin: 0 auto;
-
         border-radius: 20px;
         justify-content: space-between;
         }
         article {
             flex-basis: 48%;
+        }
+    }
+    footer {
+        > div {
+            max-width: 1130px;
+            margin: 0 auto;
         }
     }
 }

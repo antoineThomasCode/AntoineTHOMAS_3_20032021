@@ -1,135 +1,202 @@
-/*lazy loading menu items */
 @keyframes lazy-loading-menu {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    90% {
+        transform: translateY(7px);
+        opacity: 0.8;
+    }
+    95% {
+      transform: translateY(4px);
+      opacity: 1;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
   }
-}
-/* iteration on item menu and articles */
-@for $i from 1 through 4 {
-  #menu-container section:nth-child(#{$i}) {
-    animation: lazy-loading-menu (0.3s * $i);
-  }
-}
-@for $i from 1 through 4 {
-  #menu-container section article:nth-child(#{$i}) {
-    animation: lazy-loading-menu (0.4s * $i);
-  }
-}
-/*spinner loader*/
-
-@keyframes rotating {
-  50% {
-    transform: rotate(calc(180deg * var(--direction)));
-  }
-
-  100% {
-    transform: rotate(calc(360deg * var(--direction)));
-  }
-}
+};
+/*spinner loader */
 @keyframes loader-fadeOut {
   from {
-    transform: scale(1);
+      transform: scale(1);
   }
+
+  from, to {
+      background-color: transparent;
+  }
+
   to {
-    transform: scale(0);
-    height: 0;
-    width: 0;
-    display: none;
+      transform: scale(0);
+      display: none;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  
+  33% {
+    opacity: 1;
+    transform: scaleY(1.4);
+  }
+  64% {
+     opacity: .1;
+     transform: scaleY(1);
+  }
+  100% { 
+    opacity: 0;
+    transform: scaleY(.3);
   }
 }
 #spinner-loader {
-  z-index: 15;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: white;
-  overflow: hidden;
-
-  animation: loader-fadeOut 2s 4s ease-in-out forwards;
-
-  .loader {
-    width: 10em;
-    height: 10em;
-    font-size: 25px;
-    box-sizing: border-box;
-    border-top: 0.3em solid $primary;
-    border-radius: 50%;
-    position: relative;
-    animation: rotating 2s ease-in-out infinite;
-    --direction: 1;
-  }
-
-  .loader::before,
-  .loader::after {
-    content: "";
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    box-sizing: border-box;
-    top: -0.2em;
-  }
-
-  .loader::before {
-    border-top: 0.3em solid $tertiary;
-    transform: rotate(120deg);
-  }
-
-  .loader::after {
-    border-top: 0.3em solid $secondary;
-    transform: rotate(240deg);
-  }
-
-  .loader span {
-    position: absolute;
-    color: black;
-    font-family: "Shrikhand", "cursive";
-    font-weight: 700;
-    font-size: 1em;
-    width: inherit;
-    height: inherit;
-    text-align: center;
-    line-height: 10em;
-    animation: rotating 2s linear infinite;
-    --direction: -1;
-  }
-}
-/*animations on heart*/ 
-
-#menu-container h1 { 
-  display: flex;
-  justify-content: space-between;
-  span {
-    position: relative;
+  align-items: center;
+  height: 100vh;
+  background: $tertiary;
+  animation: loader-fadeOut .6s 3s ease-in-out forwards;
+  
+  .wineglass {
+      height: 36px;
+      position: relative;
     }
-    svg {
-      color: $primary;
+    .wineglass:after {
+      content: ''; 
+      position: absolute;
+      top: 47px;
+      left: 5px;
       width: 20px;
-      &:first-child {
-        
-      }
-      &:nth-child(2) {
-        position: absolute;
-        top: 4px;
-        right: 1px;
-        color: $primary;
-        transform: scale(1);
-        opacity: 0;
-        animation: opacity 3s linear;
-      }
-
+      height: 5px;
+      background: white;
+      box-shadow: 0 0 1px white;
     }
-    &:hover svg:nth-child(2){
-      opacity: 1;
-      transform: scale(0.5);
-      cursor: pointer;
+    .top {
+      background: white;
+      width: 30px;
+      height: 36px;
+      border-radius: 0 0 36px 36px;
+      box-shadow: 0 0 1px white;
+    }
+    .top:before {
+      content: ''; 
+      position: absolute;
+      left: 4px;
+      bottom: 4px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(transparent 50%, #F36E3E 50%);
+    }
+    .left .top:before {
+      animation: rotate2 2s linear infinite;
+    }
+    .right .top:before {
+      animation: rotate1 2s linear infinite;
+    }
+    .top:after {
+      content: ''; 
+      position: absolute;
+      top: 35px;
+      left: 12px;
+      width: 6px;
+      height: 13px;
+      background: white;
+      box-shadow: 0 0 1px white;
+    }
+    .left {
+      display: inline-block;
+      margin-right: 10px;
+      animation: rotate1 2s cubic-bezier(.39,1.52,.46,.92) infinite;
+    }
+    .right {
+      display: inline-block;
+      animation: rotate2 2s cubic-bezier(.39,1.52,.46,.92) infinite;
+    }
+    @keyframes rotate1{
+      0% {transform: rotate(0deg);}
+      50% {transform:rotate(22deg);}
+    }
+    @keyframes rotate2{
+      0% {transform:rotate(0deg);}
+      50% {transform:rotate(-22deg);}
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 70px;
+      height: 25px;
+      position: relative;
+      opacity: 0;
+      animation: 2s fadeInUp infinite linear 2s;
+    }
+    li {
+      width: 6px;
+      height: 15px;
+      background: white;
+      position: absolute;
+      box-shadow: 0 0 1px white;
+      transform-origin: bottom;
+    }
+    li:nth-child(1) {
+      left: 26px;
+      bottom: 5px;
+      transform: rotate(-35deg);
+    }
+    li:nth-child(2) {
+      left: 34px;
+      bottom: 8px;
+    }
+    li:nth-child(3) {
+      left: 42px;
+      bottom: 5px;
+      transform: rotate(35deg);
+    }
+}
+/*like animation */
+.animation-like {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    &:first-child {
+      z-index: 3;
+      path {
+        fill: gray;
+      }
+    }
+    &:last-child {
+      path {
+        opacity: 0;
+        fill: $primary;
+        transform: scale(0);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    svg:last-child {
+      top: 1px;
+      path {
+        transform: scale(0.9);
+        transition: all 0.6s;
+        opacity: 1;
+        transform-origin: center;
+      }
+    }
   }
 }

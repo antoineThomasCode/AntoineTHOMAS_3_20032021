@@ -1,5 +1,7 @@
 @import "./main.scss";
-
+body {
+  position: relative;
+}
 header {
   display: flex;
   > a:first-child i {
@@ -10,6 +12,7 @@ header {
 }
 main {
   flex-direction: column;
+  position: relative;
   background-color: white;
   figure {
     z-index: 2;
@@ -20,9 +23,6 @@ main {
       object-fit: cover;
       height: 210px;
     }
-    #white-shaodow-for-picture {
-      display: none;
-    }
   }
 
   #menu-container {
@@ -31,29 +31,41 @@ main {
     margin: 0 auto;
     position: relative;
     bottom: 30px;
-    padding: 30px 0;
+    padding: 40px 0 100px 0;
     border-radius: 40px 40px 0 0;
     flex-direction: column;
     width: 100%;
-    row-gap: 10px;
+    row-gap: 5px;
+    margin-bottom: -30px;
     section {
       display: flex;
       flex-direction: column;
-      row-gap: 20px;
+      row-gap: 15px;
+      padding: 20px;
     }
     h1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
       padding: 0 0 10px 20px;
       font-size: 2em;
       font-family: "Shrikhand", "cursive";
+      span {
+        margin-right: 30px;
+      }
     }
     h2 {
       font-weight: 300;
-      font-size: 1.3em;
+      font-size: 1.1em;
       text-transform: uppercase;
       > span {
         padding-bottom: 5px;
         border-bottom: solid 2.5px $tertiary;
       }
+    }
+    .btn {
+      margin-top: 30px;
     }
     article {
       @include box-shadow-light;
@@ -83,7 +95,7 @@ main {
           font-weight: 1em;
         }
         p {
-          display: inline-block;  
+          display: inline-block;
           font-size: 0.9em;
           letter-spacing: -0.02em;
           overflow: hidden;
@@ -108,9 +120,8 @@ main {
         }
       }
       &:hover > div:nth-child(2) {
-          right: 10px;
-          margin-left: 10px;
-          
+        right: 10px;
+        margin-left: 10px;
       }
       > div:nth-child(3) {
         background-color: $tertiary;
@@ -133,8 +144,8 @@ main {
         display: flex;
         left: 0px;
         i {
-            transform: rotate(360deg);
-            transition: transform 0.5s linear;
+          transform: rotate(360deg);
+          transition: transform 0.5s linear;
         }
       }
     }
@@ -152,23 +163,43 @@ main {
     }
   }
 }
+/*lazy loading on menu */
+@for $i from 1 through 3 {
+  #menu-container section:nth-of-type(1) article:nth-of-type(#{$i}) {
+    animation: lazy-loading-menu ((0.2s * $i)) linear;
+  }
+}
+
+@for $i from 1 through 3 {
+  #menu-container section:nth-of-type(2) article:nth-of-type(#{$i}) {
+    animation: lazy-loading-menu ((0.2s * $i)+1.2s) linear;
+  }
+}
+@for $i from 1 through 3 {
+  #menu-container section:nth-of-type(3) article:nth-of-type(#{$i}) {
+    animation: lazy-loading-menu ((0.2s * $i)+2.4s) linear;
+  }
+}
 footer {
-  z-index: 5;
-  margin-top: -30px;
+  width: 100%;
+  > div {
+    min-width: 80%;
+  }
 }
 @media screen and (min-width: 768px) {
   main {
-    z-index: 3;
-    margin-bottom: -200px;
     figure > img {
       height: 500px;
       position: relative;
+      object-position: 70% 75%;
     }
     #white-shadow-for-picture {
       display: flex;
       width: 100%;
       position: absolute;
-      top: 100px;
+      height: 35%;
+      top: 0px;
+      z-index: 2;
       background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0),
@@ -176,17 +207,24 @@ footer {
         #fff 80%,
         #fff 100%
       );
-      z-index: 2;
-      height: 55%;
     }
     #menu-container {
       width: 80%;
-      bottom: 200px;
+      bottom: 190px;
+      margin-bottom: -190px;
     }
   }
+  footer >div {
+    margin: 0 auto;
+    width: 80%;
+  }
 }
+
 @media screen and (min-width: 1650px) {
   main {
+    #white-shadow-for-picture {
+      height: 60%;
+    }
     #menu-container {
       width: 80%;
       flex-direction: row;
