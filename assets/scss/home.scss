@@ -3,7 +3,7 @@
 #location {
     z-index: 1;
     justify-content: center;
-    background-color: #eaeaea;
+    background-color: #EAEAEA;
     color: #353535;
     padding: 15px 0;
     box-shadow: inset -2px 2px 6px rgba(54, 54, 54, 0.2) ;
@@ -20,7 +20,7 @@
     align-items: center;
     row-gap: 25px;
     padding-bottom: 60px;
-    background-color: rgba(220,220,220, 0.21);
+    background-color: #F6F6F6;
     h1 {
         text-align: center;
         flex-basis: 80%;
@@ -83,7 +83,7 @@
     }
 }
 #restaurants-list {
-    background-color: $bc-light-gray;
+    background-color: #F6F6F6;
     > div {
         row-gap: 20px;
     }
@@ -149,6 +149,9 @@
             margin: 0 auto;
         }
     }
+    #call-to-action br {
+        display: none; 
+    }
     #restaurants-list {
         > div {
             column-gap: 15px;
@@ -181,6 +184,14 @@
         }
         article {
             flex-basis: 48%;
+        }
+    }
+    footer {
+        bottom: -230px;
+        > div {
+            max-width: 1130px;
+            margin: 0 auto;
+            
         }
     }
 }
