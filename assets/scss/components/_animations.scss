@@ -12,6 +12,7 @@
 @keyframes loader-fadeOut {
   from {
     transform: scale(1);
+    opacity: 1;
   }
 
   from,
@@ -20,7 +21,8 @@
   }
 
   to {
-    transform: scale(0);
+    transform: scale(1);
+    opacity: 0;
     display: none;
   }
 }
@@ -55,7 +57,7 @@
   align-items: center;
   height: 100vh;
   background: $tertiary;
-  animation: loader-fadeOut 0.6s 3s ease-in-out forwards;
+  animation: loader-fadeOut 0.1s 3s ease-in-out forwards;
 
   .wineglass {
     height: 36px;
