@@ -8,4 +8,40 @@
     transform: translateY(0);
     opacity: 1;
   }
+};
+
+/*like animation */
+.animation-like {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    &:first-child {
+      z-index: 0;
+      transform: scale(0.95);
+      path {
+        fill: black;
+      }
+    }
+    &:last-child {
+      path {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: center ;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    svg:last-child {
+      top: 0;
+      path {
+        transform: scale(1);
+        transition: all 0.6s;
+        opacity: 1;
+      }
+    }
+  }
 }
