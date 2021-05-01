@@ -34,8 +34,8 @@
   &:hover {
     cursor: pointer;
     svg:first-child {
-      opacity: 0;
-      transition: opacity 1s;
+      transform: scale(0.9);
+      transition: all 1s;
     }
     svg:last-child {
       top: 0;
