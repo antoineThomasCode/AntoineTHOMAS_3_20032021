@@ -1,5 +1,27 @@
 @import "./main.scss";
 /*spinner loader*/ 
+
+#spinner-loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    animation: hidden 3s forwards;
+    div {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid red;
+        border-top: 5px solid green;
+        animation: rotate-spinner 1.5s linear infinite;
+        }
+
+}
 #location {
     z-index: 1;
     justify-content: center;
@@ -123,9 +145,12 @@
               }
             }
         > div {
-            font-size: 1.2em;
+            
             font-weight: 100;
             padding: 20px 15px;
+            h3 {
+                font-size: 1.2em;
+            }
         }    
         img {
             object-fit: cover;
