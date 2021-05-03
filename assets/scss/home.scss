@@ -4,21 +4,36 @@
 #spinner-loader {
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-color: white;
     z-index: 9999;
     position: fixed;
     top: 0;
     right: 0;
     justify-content: center;
     align-items: center;
-    animation: hidden 3s forwards;
+    animation: hidden 4s forwards;
+    flex-direction: column;
     div {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        border: 5px solid red;
-        border-top: 5px solid green;
+        border: 5px solid white;
+        border-top: 5px solid $secondary;
+        border-bottom: 5px solid $primary;
         animation: rotate-spinner 1.5s linear infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            color: $tertiary;
+            font-size: 2.5em;
+        }
+        }
+        span {
+            font-family: "Shrikhand", "cursive";
+            font-size: 3em;
+            font-weight: 200;
+            margin-bottom: 100px;
         }
 
 }
