@@ -1,14 +1,14 @@
 .btn {
     text-decoration: none;
-        color: white;
-        padding: 15px 20px;
-        background-image: linear-gradient($secondary, $primary);
-        border-radius: 50px;
-        box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.4);
-        margin: 0 auto;
-        transition: all 0.4s;
-        &:hover {
-            opacity: 0.9;
-            box-shadow: 10px 17px 31px 5px rgba(120,120,120,0.56);
-        }
+    color: white;
+    padding: 15px 20px;
+    background-image: linear-gradient($secondary, $primary);
+    border-radius: 50px;
+    box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    transition: all 0.4s;
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 10px 10px 19px -7px rgba(0,0,0,0.4);
+    }
 }
