@@ -29,10 +29,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 30px;
+    width: 35px;
     &:first-child {
       z-index: 0;
-      transform: scale(0.95);
       path {
         fill: black;
       }
