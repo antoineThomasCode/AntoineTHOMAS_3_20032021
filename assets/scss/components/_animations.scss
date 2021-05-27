@@ -1,5 +1,4 @@
-
- @keyframes slide-top {
+@keyframes slide-top {
   0% {
     transform: translateY(50px);
     opacity: 0;
@@ -8,7 +7,7 @@
     transform: translateY(0);
     opacity: 1;
   }
-};
+}
 @keyframes rotate-spinner {
   form {
     transform: rotate(0);
@@ -32,7 +31,6 @@
     width: 30px;
     &:first-child {
       z-index: 0;
-      transform: scale(0.95);
       path {
         fill: black;
       }
@@ -41,7 +39,7 @@
       path {
         opacity: 0;
         transform: scale(0);
-        transform-origin: center ;
+        transform-origin: center;
       }
     }
   }
