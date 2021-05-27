@@ -1,7 +1,4 @@
 @import "./main.scss";
-body {
-  position: relative;
-}
 header {
   display: flex;
   > a:first-child i {
@@ -24,7 +21,6 @@ main {
       height: 210px;
     }
   }
-
   #menu-container {
     z-index: 3;
     background-color: #f6f8fa;
@@ -161,6 +157,7 @@ main {
   }
 }
 /*lazy loading on menu */
+
 @for $i from 1 through 3 {
   #menu-container section:nth-of-type(1) article:nth-of-type(#{$i}) {
     animation: slide-top 1s ease-out (0.2s * $i) both;
@@ -177,12 +174,14 @@ main {
     animation: slide-top 1s ease-out (0.2 * $i + 1.2s) both;
   }
 }
+
 footer {
   width: 100%;
   > div {
     min-width: 80%;
   }
 }
+
 @media screen and (min-width: 768px) {
   main {
     figure > img {
