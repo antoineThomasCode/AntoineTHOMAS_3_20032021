@@ -3,3 +3,10 @@
     -webkit-box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
     -moz-box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
 }
+@mixin lazy-menu-items ($j, $delay, $limit) {
+    @for $i from 1 through $limit {
+        #menu-container section:nth-of-type(#{$j}) article:nth-of-type(#{$i}) {
+          animation: slide-top 1s ease-out (0.2s * $i + $delay) both;
+        }
+      }
+}
