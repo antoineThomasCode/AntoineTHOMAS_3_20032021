@@ -20,7 +20,7 @@
     border: 5px solid white;
     border-top: 5px solid $secondary;
     border-bottom: 5px solid $primary;
-    animation: rotate-spinner 1.5s linear infinite;
+    animation: rotate-spinner 1.5s linear infinite; // find keyframes in animation files
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +36,7 @@
     margin-bottom: 100px;
   }
 }
+// top of the homepage for add the location option in the future
 #location {
   z-index: 1;
   justify-content: center;
