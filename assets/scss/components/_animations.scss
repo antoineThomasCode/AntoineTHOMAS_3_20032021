@@ -24,36 +24,39 @@
 /*like animation */
 .animation-like {
   position: relative;
-  i{
-    font-size:2em;
+  i {
+    font-size: 2em;
     position: absolute;
     top: 0;
     right: 0;
     text-align: center;
 
-    &:first-child{
-      transform:scale(0);
-      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    &:first-child {
+      transform: scale(0);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#9356dc),
+        to(#ff79da)
+      );
       background-clip: border-box;
       background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      z-index:1;
+      z-index: 1;
     }
   }
 
   &:hover {
     cursor: pointer;
     i:first-child {
-      transform:scale(1);
+      transform: scale(1);
       transition: all 330ms ease-in-out;
-
     }
     i:last-child {
-      transform:scale(0);
+      transform: scale(0);
       transition: all 330ms ease-in-out;
-
     }
   }
 }
-

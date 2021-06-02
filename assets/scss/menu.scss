@@ -159,10 +159,9 @@ main {
   }
 }
 /*lazy loading on menu */
-@include lazy-menu-items (1, 0, 4);
-@include lazy-menu-items (2, 0.6, 3);
-@include lazy-menu-items (3, 1.2, 3);
-
+@include lazy-menu-items(1, 0, 4);
+@include lazy-menu-items(2, 0.6, 3);
+@include lazy-menu-items(3, 1.2, 3);
 
 footer {
   width: 100%;
