@@ -19,15 +19,15 @@
   },
   "homepage": "https://github.com/antoineThomasCode/AntoineTHOMAS_3_20032021#readme",
   "dependencies": {
-    "autoprefixer": "^10.2.5",
-    "css-loader": "^5.2.0",
-    "mini-css-extract-plugin": "^1.3.9",
-    "node-sass": "^5.0.0",
-    "postcss": "^8.2.8",
-    "postcss-loader": "^5.2.0",
-    "sass-loader": "^11.0.1",
-    "webpack": "^5.28.0",
-    "webpack-cli": "^4.5.0",
+    "autoprefixer": "^10.4.0",
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^7.0.0",
+    "postcss": "^8.4.4",
+    "postcss-loader": "^6.2.1",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
     "webpack-remove-empty-scripts": "^0.7.1"
   }
 }

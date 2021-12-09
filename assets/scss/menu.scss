@@ -229,3 +229,11 @@ footer {
     }
   }
 }
+@media screen and (max-width: 360px) {
+  main #menu-container h1 {
+    font-size:  1.3em;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    
+  }
+}
